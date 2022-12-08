@@ -33,6 +33,7 @@ class ExpandedFabOptionWidget extends StatelessWidget {
         ),
         const SizedBox(width: 12),
         FloatingActionButton(
+          heroTag: UniqueKey(),
           onPressed: onPressed,
           child: icon,
         ),

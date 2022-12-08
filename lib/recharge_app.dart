@@ -7,6 +7,7 @@ import 'features/body/body_view.dart';
 import 'features/bottom_navigation/bottom_navigation_view.dart';
 import 'features/life/life_view.dart';
 import 'features/me/me_view.dart';
+import 'features/mind/journal/new_journal_view.dart';
 import 'features/mind/mind_view.dart';
 import 'features/settings/settings_view.dart';
 
@@ -50,6 +51,13 @@ class RechargeApp extends StatelessWidget {
             name: MindView.routeName,
             path: MindView.routeName,
             builder: (context, state) => const MindView(),
+            routes: [
+              GoRoute(
+                name: NewJournalView.routeName,
+                path: NewJournalView.routeName,
+                builder: (context, state) => const NewJournalView(),
+              ),
+            ],
           ),
           GoRoute(
             name: BodyView.routeName,

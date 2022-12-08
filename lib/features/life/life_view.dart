@@ -19,27 +19,28 @@ class LifeView extends ConsumerWidget {
       body: Stack(
         children: [
           ref.watch(lifeProvider).fabExpanded
-              ? const OverlayWidget()
+              ? OverlayWidget(
+                  onTap: ref.read(lifeProvider.notifier).toggleFabExpanded)
               : const SizedBox(),
           ExpandedFabOptionsWidget(
             isExpanded: ref.watch(lifeProvider).fabExpanded,
             children: [
               ExpandedFabOptionWidget(
-                label: newCircadianLabel,
+                label: logSunLabel,
                 icon: const Icon(Icons.sunny),
                 onPressed: () {
                   // TODO: Present log sun options
                 },
               ),
               ExpandedFabOptionWidget(
-                label: newWaterLabel,
+                label: logWaterLabel,
                 icon: const Icon(Icons.water_drop),
                 onPressed: () {
                   // TODO: Present log water options
                 },
               ),
               ExpandedFabOptionWidget(
-                label: newGroundingLabel,
+                label: logGroundingLabel,
                 icon: const Icon(Icons.grass),
                 onPressed: () {
                   // TODO: Present log grounding options

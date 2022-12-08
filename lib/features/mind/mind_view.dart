@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:recharge/strings.dart';
 
 import '../widgets/xwidgets.dart';
+import 'journal/new_journal_view.dart';
 import 'mind.dart';
 
 class MindView extends ConsumerWidget {
@@ -19,23 +21,25 @@ class MindView extends ConsumerWidget {
       body: Stack(
         children: [
           ref.watch(mindProvider).fabExpanded
-              ? const OverlayWidget()
+              ? OverlayWidget(
+                  onTap: ref.read(mindProvider.notifier).toggleFabExpanded)
               : const SizedBox(),
           ExpandedFabOptionsWidget(
             isExpanded: ref.watch(mindProvider).fabExpanded,
             children: [
               ExpandedFabOptionWidget(
-                label: newMeditationLabel,
+                label: logMeditationLabel,
                 icon: const Icon(Icons.self_improvement),
                 onPressed: () {
                   // TODO: Present new meditation options
                 },
               ),
               ExpandedFabOptionWidget(
-                label: newJournalLabel,
+                label: logJournalLabel,
                 icon: const Icon(Icons.edit_note),
                 onPressed: () {
-                  // TODO: Present new journal entry options
+                  context.pushNamed(NewJournalView.routeName);
+                  ref.read(mindProvider.notifier).toggleFabExpanded();
                 },
               ),
             ],

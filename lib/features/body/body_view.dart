@@ -53,27 +53,28 @@ class BodyView extends ConsumerWidget {
             ],
           ),
           ref.watch(bodyProvider).fabExpanded
-              ? const OverlayWidget()
+              ? OverlayWidget(
+                  onTap: ref.read(bodyProvider.notifier).toggleFabExpanded)
               : const SizedBox(),
           ExpandedFabOptionsWidget(
             isExpanded: ref.watch(bodyProvider).fabExpanded,
             children: [
               ExpandedFabOptionWidget(
-                label: newWorkoutLabel,
+                label: logWorkoutLabel,
                 icon: const Icon(Icons.run_circle),
                 onPressed: () {
                   // TODO: Present log workout options
                 },
               ),
               ExpandedFabOptionWidget(
-                label: newFoodLabel,
+                label: logFoodLabel,
                 icon: const Icon(Icons.lunch_dining),
                 onPressed: () {
                   // TODO: Present log food options
                 },
               ),
               ExpandedFabOptionWidget(
-                label: newSleepLabel,
+                label: logSleepLabel,
                 icon: const Icon(Icons.hotel),
                 onPressed: () {
                   // TODO: Present log sleep options

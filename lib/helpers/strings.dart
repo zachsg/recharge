@@ -7,6 +7,9 @@ const logMeditationLabel = 'Log meditation';
 const journalingLabel = 'Journaling';
 const logJournalLabel = 'Log journal entry';
 const newJournalLabel = 'New Journal Entry';
+const sarnoLabel = 'Sarno';
+const gratitudeLabel = 'Gratitude';
+const openLabel = 'Open';
 
 /// Body
 const bodyLabel = 'Body';

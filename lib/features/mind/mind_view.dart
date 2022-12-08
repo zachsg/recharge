@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:recharge/strings.dart';
+import 'package:recharge/helpers/strings.dart';
 
 import '../widgets/xwidgets.dart';
-import 'journal/new_journal_view.dart';
+import 'journal/new_journal/new_journal_view.dart';
 import 'mind.dart';
 
 class MindView extends ConsumerWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:recharge/strings.dart';
+import 'package:recharge/helpers/strings.dart';
 
 class SettingsView extends ConsumerWidget {
   const SettingsView({super.key});

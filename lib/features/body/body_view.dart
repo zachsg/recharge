@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:recharge/strings.dart';
+import 'package:recharge/helpers/strings.dart';
 
 import '../widgets/xwidgets.dart';
 import 'body.dart';

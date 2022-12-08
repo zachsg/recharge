@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:recharge/constants.dart';
-import 'package:recharge/strings.dart';
+import 'package:recharge/helpers/constants.dart';
+import 'package:recharge/helpers/strings.dart';
 
 import 'features/body/body_view.dart';
 import 'features/bottom_navigation/bottom_navigation_view.dart';
 import 'features/life/life_view.dart';
 import 'features/me/me_view.dart';
-import 'features/mind/journal/new_journal_view.dart';
+import 'features/mind/journal/new_journal/new_journal_view.dart';
 import 'features/mind/mind_view.dart';
 import 'features/settings/settings_view.dart';
 

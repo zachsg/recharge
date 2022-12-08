@@ -17,16 +17,20 @@ class ExpandedFabOptionWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        Material(
-          elevation: 0,
-          shadowColor: Theme.of(context).colorScheme.background,
-          child: Container(
-            color: Theme.of(context).colorScheme.background,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-              child: Text(
-                label,
-                style: Theme.of(context).textTheme.bodyLarge,
+        GestureDetector(
+          onTap: onPressed,
+          child: Material(
+            elevation: 0,
+            shadowColor: Theme.of(context).colorScheme.background,
+            child: Container(
+              color: Theme.of(context).colorScheme.background,
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                child: Text(
+                  label,
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
               ),
             ),
           ),
